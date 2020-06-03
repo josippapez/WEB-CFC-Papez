@@ -54,6 +54,7 @@ $red=$izraz->fetch();
             </div>
             <button type="submit" class="btn btn-primary" name="submit">Submit</button>
         </form>
+        <button type="delete" class="btn btn-primary float-right" name="delete" onclick="location.href='delete_fighter.php?id=<?php echo $red['cat_id']; ?>'">Delete fighter</button>
     </div>
 </body>
 </html>

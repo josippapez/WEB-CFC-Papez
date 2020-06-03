@@ -166,7 +166,6 @@ function startFight() {
 }
 
 function updateCats() {
-    // function below will run clear.php?h=michael
     jQuery.ajax({
         type: "POST",
         url: "update_cats.php",

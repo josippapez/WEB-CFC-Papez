@@ -85,14 +85,6 @@ function startFight() {
             document.getElementById("generateFight").removeAttribute("disabled");
             document.getElementById("randomFight").removeAttribute("disabled");
             document.getElementById("addNewFighter").removeAttribute("disabled");
-            setClickableCats(firstChild, firstCatInfo, 1);
-            setClickableCats(secondChild, secondCatInfo);
-            Array.from(document.getElementById("firstSide").getElementsByClassName("fighter-list")[0].children).map(child =>
-                child.style.cssText = "pointer-events: auto;"
-            );
-            Array.from(document.getElementById("secondSide").getElementsByClassName("fighter-list")[0].children).map(child =>
-                child.style.cssText = "pointer-events: auto;"
-            );
             const firstCatRecordPercentage = [100 * ((firstCatInfo.record.wins) / (firstCatInfo.record.wins + firstCatInfo.record.loss)), firstCatInfo.id];
             const secondCatRecordPercentage = [100 * ((secondCatInfo.record.wins) / (secondCatInfo.record.wins + secondCatInfo.record.loss)), secondCatInfo.id];
             var dominantFighter = 0;
@@ -161,6 +153,8 @@ function startFight() {
             updateCats();
             showFirstFighter(firstChild.children[0], firstCatInfo);
             showSecondFighter(secondChild.children[0], secondCatInfo);
+            setClickableCats(firstChild, firstCatInfo, 1);
+            setClickableCats(secondChild, secondCatInfo);
         }
     }, 1000);
 }
